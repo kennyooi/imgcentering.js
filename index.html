@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<title>imgCentering.js jQuery plugin</title>
+<meta name="description" content="Demonstration page for imgCentering.js jQuery plugin for centering your images."/>
+<link rel="stylesheet" href="css/vendor.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/jquery.lightbox-0.5.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/vendor.js"></script>
+<script src="js/imgcentering.js"></script>
+<script src="js/jquery.lightbox-0.5.pack.js"></script>
+<script>
+$(document).ready( function() {
+	//imgcentering script
+	$('.imgset1 img').imgCentering();
+	$('.imgset2 img').imgCentering({'forceWidth':true, 'bgColor':'#000'});
+	$('.imgset3 img').imgCentering({'forceHeight':true, 'bgColor':'#000'});
+	$('.imgset4 img').imgCentering({'forceSmart':true});
+
+	//lightbox script
+	$('a[rel*=lightbox]').lightBox();
+});
+</script>
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="canonical" href="http://www.inwebson.com/demo/imgcentering/" />
+</head>
+<body>
+<!-- Header -->
+<header id="header" class="clearfix">
+	<h1><em>imgCentering.js</em> jQuery Plugin</h1>
+	<div id="backlinks" class="clearfix">
+		<a href="http://www.inwebson.com/jquery/imgcentering-js-centering-images-plugin/">Back to Article &raquo;</a>
+		<a href="http://www.inwebson.com">Visit inWebson.com &raquo;</a>
+	</div>
+</header>
+
+<!-- Content -->
+<section id="wrapper">
+	<h2><em>imgCentering.js</em><br/>
+	<small>A lightweight jQuery plugin to centering your Images</small></h2>
+		
+	<div class="holder">
+		<ul class="imgset1 imageHolder clearfix">
+			<li><a href="gallery/sample1.jpg" rel="lightbox"><img src="gallery/sample1.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample2.jpg" rel="lightbox"><img src="gallery/sample2.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample3.jpg" rel="lightbox"><img src="gallery/sample3.jpg" alt="" /></a></li>
+		</ul>
+		<div class="codeHolder">
+<pre>
+$('.imgset1 img').imgCentering();	//centering only no stretch
+</pre>		
+		</div>
+	</div>
+		
+	<div class="divider"></div>	
+		
+	<div class="holder">
+		<ul class="imgset2 imageHolder clearfix">
+			<li><a href="gallery/sample1.jpg" rel="lightbox"><img src="gallery/sample1.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample2.jpg" rel="lightbox"><img src="gallery/sample2.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample3.jpg" rel="lightbox"><img src="gallery/sample3.jpg" alt="" /></a></li>
+		</ul>
+		<div class="codeHolder">
+<pre>
+$('.imgset2 img').imgCentering({
+	'forceWidth': true,		//centering with fix width
+	'bgColor': '#000'		//empty space color
+});
+</pre>		
+		</div>
+	</div>
+	
+	<div class="divider"></div>	
+	
+	<div class="holder">
+		<ul class="imgset3 imageHolder clearfix">
+			<li><a href="gallery/sample1.jpg" rel="lightbox"><img src="gallery/sample1.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample2.jpg" rel="lightbox"><img src="gallery/sample2.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample3.jpg" rel="lightbox"><img src="gallery/sample3.jpg" alt="" /></a></li>
+		</ul>
+		<div class="codeHolder">
+<pre>
+$('.imgset3 img').imgCentering({
+	'forceHeight': true,		//centering with fix height
+	'bgColor': '#000'		//empty space color
+});
+</pre>		
+		</div>
+	</div>
+	
+	<div class="divider"></div>	
+	
+	<div class="holder">
+		<ul class="imgset4 imageHolder clearfix">
+			<li><a href="gallery/sample1.jpg" rel="lightbox"><img src="gallery/sample1.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample2.jpg" rel="lightbox"><img src="gallery/sample2.jpg" alt="" /></a></li>
+			<li><a href="gallery/sample3.jpg" rel="lightbox"><img src="gallery/sample3.jpg" alt="" /></a></li>
+		</ul>
+		<div class="codeHolder">
+<pre>
+$('.imgset4 img').imgCentering({
+	'forceSmart': true		//centering without showing background
+});
+</pre>		
+		</div>
+	</div>
+	
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+	<span>&copy; 2012 <a href="http://www.inwebson.com">inWebson.com</a>. Design by <a href="http://www.inwebson.com/contactus">Kenny Ooi</a>. Powered by <a href="http://www.inwebson.com/jquery/">jQuery</a>.</span>
+</footer>
+
+</body>
+</html>

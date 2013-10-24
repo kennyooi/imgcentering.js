@@ -1,0 +1,83 @@
+body{
+	background:url(../images/bg.png) 0 0 repeat #efefef;
+}
+#wrapper{
+	width:800px;
+	margin:0 auto 50px;
+}
+ul.imageHolder{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+ul.imageHolder li{
+	float:left;
+	margin-left:15px;
+	margin-bottom:10px;
+	border:5px solid #DCE8ED;
+	
+	transition:border-color 1s;
+	-moz-transition:border-color 1s;
+	-webkit-transition:border-color 1s;
+	-ms-transition:border-color 1s;
+	-o-transition:border-color 1s;
+}
+ul.imageHolder li:hover{
+	border-color:#8DCBE0;
+}
+ul.imageHolder li a{
+	width:235px;
+	height:200px;
+	display:block;
+}
+ul.imageHolder li img{
+	width:235px;
+	height:200px;
+}
+.codeHolder{
+	background-color:#fff;
+	padding:7px 20px;
+	margin:0 25px 20px;
+	border-radius:15px;
+	box-shadow:1px 3px 5px #aaa inset;
+	-moz-box-shadow:1px 3px 5px #aaa inset;
+	-webkit-box-shadow:1px 3px 5px #aaa inset;
+	opacity:0.3;
+	
+	transition:opacity 1s;
+	-moz-transition:opacity 1s;
+	-webkit-transition:opacity 1s;
+	-ms-transition:opacity 1s;
+	-o-transition:opacity 1s;
+}
+.codeHolder:hover{
+	opacity:1;
+}
+.codeHolder pre{
+	margin:0;
+	line-height:1.5;
+	white-space:pre-wrap;
+}
+.divider{
+	height:1px;
+	background-color:#ccc;
+	border-bottom: 1px solid #fff;
+	margin:10px 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+	#wrapper{
+		width:100%;
+	}
+	ul.imageHolder li{
+		margin-left:4px;
+	}
+}
+@media screen and (max-width: 480px) {
+	ul.imageHolder li{
+		float:none;
+		width:235px;
+		height:200px;
+		margin:0 auto 10px;
+	}
+}
